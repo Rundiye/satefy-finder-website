@@ -23,7 +23,7 @@ Router.prototype.generateLandingPage = function(parentElement) {
   this.page.generate();
 }
 
-Router.prototype.generateMoviesPage = function(parentElement) {
+Router.prototype.generateCountriesPage = function(parentElement) {
   this.page = new CountriesPage(parentElement);
   this.page.generate();
 }

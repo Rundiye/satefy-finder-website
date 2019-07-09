@@ -19,12 +19,13 @@ CountriesPage.prototype.generate = async function() {
     </header>
     <section class="cards-container">
     `;
+    
   this.countries.forEach((country) => {
     this.elements += `
       <article>
         <h3>${country.name}</h3>
-        <p>${country.score}</p>
-        <p>${country.source}</p>
+        <p>${country.advisory.score}</p>
+        <p>${country.advisory.source}</p>
       </article>
     `;
   })
