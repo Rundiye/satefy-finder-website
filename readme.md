@@ -32,13 +32,13 @@ Router: this.buildDOM(), this.generateLandingPage(), this.generateCountriesPage(
 
 FlagService: this.getAllFlags(), this.getOneFlag(). 
 
-CountryScoreService: this.getAllCountries(), this.getOneCountry().
+CountryRateService: this.getAllCountries(), this.getOneCountry().
 
 Loading: this.generate(), this.render().
 
 LandingPage: this.generate(), this.render().
 
-CountriesPage: this.generate(), this.render(), this.callCountryScoreService(), this.callFlagService().
+CountriesPage: this.generate(), this.render(), this.callCountryRateService(), this.callFlagService().
 
 Footer: this.generate(), this.render().
 
@@ -56,24 +56,14 @@ CountryPage: The country page has a list with all the countries available for se
 
 ## Task
 
- 1- Create 3 screens
- 2- Transition of screens
- 3- Create Game Loop
- 4- Create Player
- 5- Create Enemies
- 6- Create Boxes and Pizzas(extra lives)
- 7- Coin counter and lives counter
- 8- Apply images and sounds
- 9- Set boundaries
- 10- Apply styles with css
-
+ -
 
 ## Links 
 
 ### Git
 
-[Link Repo] https://github.com/Rundiye/Foodie-Yoshi
-[Link Deploy] https://rundiye.github.io/Foodie-Yoshi/
+[Link Repo] https://github.com/Rundiye/satefy-finder-website
+[Link Deploy] https://rundiye.github.io/satefy-finder-website/
 
 ### Slides
 
