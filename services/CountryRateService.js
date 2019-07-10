@@ -1,13 +1,14 @@
 'use strict';
 
 function CountryRateService() {
-  this.baseUrl = 'https://www.travel-advisory.info/api?countrycode=AU';
+  this.baseUrl = 'https://www.travel-advisory.info/api';
 }
 
 CountryRateService.prototype.getAllCountries = async function() {
   var response = await fetch(`${this.baseUrl}`);
-  var data = await response.json();
-  return data.results;
+  var getData = await response.json();
+
+  return getData.data;
 }
 
 var countryRateServiceInstance = new CountryRateService();

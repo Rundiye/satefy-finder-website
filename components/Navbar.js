@@ -10,6 +10,7 @@ function Navbar(parentElement, links, style) {
 
 Navbar.prototype.generate = function() {
   this.elements = `<nav>
+                    <h1>SAFETY FINDER</h1> 
                     <ul>`;
   this.links.forEach((link) => {
     this.elements += `

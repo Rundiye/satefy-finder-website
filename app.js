@@ -12,7 +12,6 @@ function main() {
     url: '/countries'}
   ];
 
-
   generateLayout();
   generateNavbar();
   addListenersToNavbar();

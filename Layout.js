@@ -12,8 +12,8 @@ function Layout(root, style) {
 Layout.prototype.generate = function() {
   this.elements = `
   <header id="site-header"></header>
-  <main id="site-main"></main>
-  <footer id="site-footer"></footer>
+  <main id="site-main" class="wrapper"></main>
+  <footer id="site-footer"><p>&copy;2019 Jundi Ye</p> </footer>
   `;
 
   this.render();

@@ -3,7 +3,7 @@
 function CountriesPage(parentElement) {
   this.parentElement = parentElement;
   this.elements = null;
-  this.countries = null;
+  this.countries = [];
   this.loading = null;
   
 }
@@ -19,27 +19,25 @@ CountriesPage.prototype.generate = async function() {
     </header>
     <section class="cards-container">
     `;
-   /* 
-  this.countries.forEach(data => {
-    this.elements += `
-      <article>
-        <h3>${data.name}</h3>
-        <p>${data.advisory.score}</p>
-        <p>${data.advisory.source}</p>
-      </article>
-    `;
-  })*/
 
-  this.countries.forEach(data => {
+  var safeCountries = this.countries.filter(function(country){
+      return country.advisory.score < 1;
+    });
+  
+  safeCountries.forEach((country) => {
     this.elements += `
       <article>
-        <h3>${data.name}</h3>
-        <p>${data.advisory.score}</p>
-        <p>${data.advisory.source}</p>
+        <h3>${country.name}</h3>
+        <p>Safety Score : ${country.advisory.score}</p>
+        <p>Country Code : ${country.iso_alpha2}</p>
       </article>
     `;
+
+
+  
   })
-
+  
+  
 
   this.elements += `</section>`
   this.render();
@@ -50,5 +48,9 @@ CountriesPage.prototype.render = function() {
 }
 
 CountriesPage.prototype.connectToAPI = async function() {
-  this.countries = await countryRateServiceInstance.getAllCountries();
+ var countriesObject = await countryRateServiceInstance.getAllCountries();
+  for(var key in countriesObject){
+    this.countries.push(countriesObject[key])
+  }
+  console.log(this.countries);
 }
