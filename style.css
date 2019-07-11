@@ -5,17 +5,13 @@ html {
   width: 100%;
 }
 
-
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   font-size: 1em;
- 
-
 }
-
 
 /* ---- typography ---- */
 
@@ -24,7 +20,6 @@ body {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 16px;
   line-height: 147%;
-  
 }
 
 h1 {
@@ -38,9 +33,33 @@ h2 {
   font-size: 1em;
 }
 
+h3 {
+  margin: 0;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
 
 p {
   margin:0;
+}
+
+/* ---- Navbar ---- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  margin: 5px 10px;
+  height: 100px;
+}
+
+ul {
+  padding-right: 10px;
+}
+
+li {
+  list-style-type: none;
 }
 
 a {
@@ -49,24 +68,13 @@ a {
   margin-left: 10px;
 }
 
-ul {
+.tierra-pic {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  max-height: 73%;
+
 }
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px 10px;
-}
-
-
-
-li {
-  list-style-type: none;
-}
-
 
 /* ---- layout ---- */
 
@@ -81,18 +89,10 @@ li {
   z-index: 1;
 }
 
-
-
-
-
 #site-main {
   height: 100%;
-  /*background: rgb(78, 132, 133);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 15%, rgba(253,187,45,1) 100%);
-  */
   background-repeat: no-repeat;
-  background-size: cover;
- 
+  background-size: cover; 
 }
 
 #site-main .landing-page {
@@ -111,21 +111,7 @@ li {
   align-items: center;
   justify-content: center;
   border-radius: 2%;
-
 }
-
-
-
-
-/*
-@media (min-width: 768px) {
-  .container {
-    max-width: 728px;
-    margin: 0 auto;
-  }
-}*/
-
-
 
 
 /* ---- components ---- */
@@ -175,8 +161,7 @@ li {
 }
 
 
-
-/* ---- section ---- */
+/* ---- Landing Page ---- */
 
 .travel-pic {
   display: flex;
@@ -185,8 +170,6 @@ li {
   margin-bottom: 30px;
   border-radius: 5%;
   width: 100%;
-
-
 }
 
 .two {
@@ -194,11 +177,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-
-}
-
-.three {
-  padding: 30px;
 }
 
 .four {
@@ -208,7 +186,7 @@ li {
   margin-bottom: 20px;
 }
 
-
+/*
 .welcome {
   font-size: 2.5em;
   font-family: futura;
@@ -221,17 +199,17 @@ li {
   color:#313131;
   font-weight: bold;
   -webkit-animation:colorchange 20s infinite alternate;
-}
+}*/
 
 .title {
   color:#313131;
   font-weight: bold;
   -webkit-animation:colorchange 20s infinite alternate;
-  margin: 5px;
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  height: 100%;
 
-}
-
-.tierra-pic {
 }
 
 @-webkit-keyframes colorchange {
@@ -277,24 +255,12 @@ li {
   }
 }
 
-.countries-list {
-
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 0;
-  grid-row-gap: 35px;
-  padding: 30px;
-  margin-top: 40px;
-}
-
 #cf {
   position:relative;
   height:30%;
   width:80%;
   margin:0 auto;
+  padding: 30px;
 }
 
 #cf .travel-pic {
@@ -310,6 +276,68 @@ li {
   opacity:0;
 }
 
+
+/* ---- Countries Page ---- */
+
+.countries-list {
+
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 35px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+
 article {
   
+  padding-top: 15px;
+
+}
+
+article:hover {
+  background-color: #1abc9c;
+  border-radius: 10%;
+  padding: 6%;
+}
+
+.country-name {
+  border: 1px solid white;
+  background-color: #3d768a;
+  border-radius: 8%;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: white;
+}
+
+.flag-container{
+  display: flex;
+  line-height: 200%;
+}
+
+.flag-section {
+  display: flex;
+  justify-content: center;
+
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+
+  #cf {
+    top: 6vh;
+  }
+  
+  .botones {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
 }

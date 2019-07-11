@@ -27,10 +27,20 @@ CountriesPage.prototype.generate = async function() {
   safeCountries.forEach((country) => {
     this.elements += `
       <article class="countries-list">
+      <section class="country-name">
         <h3>${country.name}</h3>
-        <p>Safety Score : ${country.advisory.score}</p>
-        <p>Country Code : ${country.iso_alpha2}</p>
-      </article>
+      </section>
+      <div class="flag-container">
+      <section class="flag-section">
+      <img class="flag" src="https://www.countryflags.io/${country.iso_alpha2}/shiny/64.png">
+      </section>
+      <ul>  
+      <li>Safety Score : ${country.advisory.score}</li>
+        <li>Country Code : ${country.iso_alpha2}</li>
+      </ul>
+        
+        </div>
+        </article>
     `;
 
   })
