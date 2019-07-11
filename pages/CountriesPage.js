@@ -26,7 +26,7 @@ CountriesPage.prototype.generate = async function() {
   
   safeCountries.forEach((country) => {
     this.elements += `
-      <article class="countries-list">
+      <article class="countries-list ease-out">
       <section class="country-name">
         <h3>${country.name}</h3>
       </section>
