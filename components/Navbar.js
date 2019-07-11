@@ -10,7 +10,8 @@ function Navbar(parentElement, links, style) {
 
 Navbar.prototype.generate = function() {
   this.elements = `<nav>
-                    <h1>SAFETY FINDER</h1> 
+  <img class="tierra-pic" src="images/globo-tierra.gif" alt="globo terraqueo">
+                    <h1 class="title">S@FETY FINDER</h1> 
                     <ul>`;
   this.links.forEach((link) => {
     this.elements += `

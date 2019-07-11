@@ -21,20 +21,18 @@ CountriesPage.prototype.generate = async function() {
     `;
 
   var safeCountries = this.countries.filter(function(country){
-      return country.advisory.score < 1;
+      return country.advisory.score <= 1;
     });
   
   safeCountries.forEach((country) => {
     this.elements += `
-      <article>
+      <article class="countries-list">
         <h3>${country.name}</h3>
         <p>Safety Score : ${country.advisory.score}</p>
         <p>Country Code : ${country.iso_alpha2}</p>
       </article>
     `;
 
-
-  
   })
   
   
