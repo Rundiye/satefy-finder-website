@@ -47,7 +47,6 @@ a {
   color: white;
   text-decoration: none;
   margin-left: 10px;
-  margin
 }
 
 ul {
@@ -79,6 +78,7 @@ li {
   top: 0;
   position: fixed;  
   border-radius: 2%;
+  z-index: 1;
 }
 
 
@@ -130,10 +130,8 @@ li {
 
 /* ---- components ---- */
 
-
-.four {
-  
-
+.botones {
+  margin-top: 50px;
 }
 
 .myButton {
@@ -191,30 +189,13 @@ li {
 
 }
 
-/*
-.wrapper {
-  display: grid;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(200px, auto);
-
-}
-.one {
-  grid-row: 1;
-}
-.two { 
-  grid-row: 2;
-}
-.three {
-  grid-row: 3/5;
-}
-.four {
-  grid-row: 6/7;
+.two {
+  padding: 10px;
   display: flex;
-align-items: center;
-justify-content: center;
-margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
 
-} */
+}
 
 .three {
   padding: 30px;
@@ -329,3 +310,6 @@ margin-bottom: 20px;
   opacity:0;
 }
 
+article {
+  
+}
