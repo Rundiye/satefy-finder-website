@@ -341,3 +341,21 @@ article:hover {
     
   }
 }
+
+@media (min-width: 1024px) {
+  .container {
+    margin: 0 auto;
+  }
+
+  #cf {
+    top: 4vh;
+    width: 50%;
+  }
+  
+  .botones {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+}
