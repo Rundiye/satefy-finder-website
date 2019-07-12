@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 function Footer(parentElement) {
   this.parentElement = parentElement;
@@ -19,4 +19,4 @@ Footer.prototype.generate = function() {
 Footer.prototype.render = function() {
   this.parentElement.innerHTML = this.elements;
 
-}
+}*/

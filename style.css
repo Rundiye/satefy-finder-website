@@ -3,6 +3,10 @@
 html {
   box-sizing: border-box;
   width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+   
+
 }
 
 body {
@@ -17,7 +21,7 @@ body {
 
 body {
   color: #111;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   line-height: 147%;
 }
@@ -58,6 +62,7 @@ ul {
   padding-right: 10px;
 }
 
+
 nav ul {
   display: flex;
   padding-left: 0;
@@ -67,6 +72,8 @@ li {
   list-style-type: none;
 }
 
+
+
 a {
   color: white;
   text-decoration: none;
@@ -74,8 +81,8 @@ a {
 }
 
 li a:hover {
-  color: yellow;
-  font-size: 1.5em;
+  color: lightskyblue;
+  font-size: 1.2em;
 }
 
 .tierra-pic {
@@ -113,7 +120,7 @@ li a:hover {
   margin-top: 75px;
 }
 
-#site-footer {
+#site-footer p {
   color: white;
   background: midnightblue;
   width: 100%;
@@ -125,10 +132,13 @@ li a:hover {
 }
 
 
+
+
 /* ---- components ---- */
 
 .botones {
   margin-top: 70px;
+  z-index: 1;
 }
 
 .myButton {
@@ -197,20 +207,7 @@ li a:hover {
   margin-bottom: 20px;
 }
 
-/*
-.welcome {
-  font-size: 2.5em;
-  font-family: futura;
-  font-style: italic;
-  width:100%;
-  padding-top: 30px;
-  margin: 0 auto;
-  text-align: center;
 
-  color:#313131;
-  font-weight: bold;
-  -webkit-animation:colorchange 20s infinite alternate;
-}*/
 
 .title {
   color:#313131;
@@ -291,9 +288,7 @@ li a:hover {
 
 /* ---- Countries Page ---- */
 
-.countries-list {
 
-}
 
 .cards-container {
   display: grid;
@@ -308,9 +303,7 @@ article {
   padding-top: 15px;
 }
 
-article:hover {
- 
-}
+
 
 .country-name {
   border-bottom: 2px solid #000000;
@@ -323,37 +316,27 @@ article:hover {
   display: flex;
   line-height: 200%;
 }
+.flag {
+  width: 100%;
+  transition: all 300ms ease-in-out;
+  box-shadow: whitesmoke;
+
+  
+}
+.flag:hover {
+  transform: scale(1.5) ;
+  margin-top: 10px;
+}
 
 .flag-section {
   display: flex;
   justify-content: center;
-
+  height: 100%;
 }
 
-.box-effect.ease-out {
-  transition-timing-function: ease-in-out;
-  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-}
 
-/*
-@media (min-width: 768px) {
-  .container {
-    max-width: 728px;
-    margin: 0 auto;
-  }
 
-  #cf {
-    top: 6vh;
-  }
-  
-  .botones {
-    margin-top: 200px;
-    display: flex;
-    justify-content: space-evenly;
-    
-  }
-}
-*/
+
 @media (min-width: 768px) {
   .container {
     max-width: 728px;
@@ -379,7 +362,32 @@ article:hover {
     grid-column-gap: 68px;
     grid-row-gap: 35px;
 
-}
+  }
+
+  nav li{
+    font-size: 1.5em;
+  }
+
+  .plane-move {
+    transform: translate(800px, -1025px);
+    z-index: 1;
+    transition: 5s; 
+  
+  }
+  
+  .plane-move2 {
+    transform: translate(800px, -1025px);
+    z-index: 1;
+    transition: 5s; 
+  
+  }
+  
+  .plane-move3 {
+    transform: translate(400px, -1025px);
+    z-index: 1;
+    transition: 5s; 
+  
+  }
 }
 
 @media (min-width: 1024px) {
@@ -389,6 +397,115 @@ article:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 68px;
     grid-row-gap: 35px;
+  }
+
+  #cf {
+    top: 4vh;
+    width: 50%;
+  }
+  
+  .botones {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+
+  .plane {
+    position: fixed;
+    bottom: 50px;
+    left: -200px;
+    width: 10%;
+  
+  }
+  
+  .plane2 {
+    position: fixed;
+    bottom: 50px;
+    left: -200px;
+    width: 10%;
+  
+  }
+  
+  .plane3 {
+    position: fixed;
+    bottom: 50px;
+    left: -200px;
+    width: 10%;
+  
+  }
+  
+  .plane-move {
+    transform: translate(900px, -1200px);
+    z-index: 1;
+    transition: 3s; 
+  
+  }
+  
+  .plane-move2 {
+    transform: translate(800px, -1200px);
+    z-index: 1;
+    transition: 3s; 
+  
+  }
+  
+  .plane-move3 {
+    transform: translate(400px, -1200px);
+    z-index: 1;
+    transition: 3s; 
+  
+  }
+}
+
+.toggle-content {
+	display: none;
+}
+
+.flag-section:hover+.country-info {
+  display: block;
+}
+
+.plane {
+  position: fixed;
+  bottom: 20px;
+  left: -120px;
+  width: 15%;
 
 }
+
+.plane2 {
+  position: fixed;
+  bottom: 20px;
+  left: -100px;
+  width: 15%;
+
+}
+
+.plane3 {
+  position: fixed;
+  bottom: 20px;
+  left: -100px;
+  width: 15%;
+
+}
+
+.plane-move {
+  transform: translate(900px, -800px);
+  z-index: 1;
+  transition: 6s; 
+
+}
+
+.plane-move2 {
+  transform: translate(800px, -400px);
+  z-index: 1;
+  transition: 6s; 
+
+}
+
+.plane-move3 {
+  transform: translate(400px, -800px);
+  z-index: 1;
+  transition: 6s; 
+
 }

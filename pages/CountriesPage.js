@@ -23,27 +23,36 @@ CountriesPage.prototype.generate = async function() {
   var safeCountries = this.countries.filter(function(country){
       return country.advisory.score <= 1;
     });
-  
-  safeCountries.forEach((country) => {
-    this.elements += `
-      <article class="countries-list ease-out">
-      <section class="country-name">
-        <h3>${country.name}</h3>
-      </section>
-      <div class="flag-container">
-      <section class="flag-section">
-      <img class="flag" src="https://www.countryflags.io/${country.iso_alpha2}/shiny/64.png">
-      </section>
-      <ul>  
-      <li>Safety Score : ${country.advisory.score}</li>
-        <li>Country Code : ${country.iso_alpha2}</li>
-      </ul>
-        
-        </div>
-        </article>
-    `;
+
+
+ 
+ 
+ 
+ safeCountries.forEach((country) => {
+   this.elements += `
+   <article class="countries-list ease-out">
+   <section class="country-name">
+   <h3>${country.name}</h3>
+   </section>
+   <div class="flag-container ">
+   <section class="flag-section">
+   <img class="flag" src="https://www.countryflags.io/${country.iso_alpha2}/shiny/64.png">
+   </section>
+   <ul class="country-info toggle-content">  
+   <li>Safety Score : ${country.advisory.score}</li>
+   <li>Country Code : ${country.iso_alpha2}</li>
+   </ul>
+   
+   </div>
+   </article>
+   `;
+
 
   })
+
+
+  
+
   
   
 
@@ -53,6 +62,7 @@ CountriesPage.prototype.generate = async function() {
 
 CountriesPage.prototype.render = function() {
   this.parentElement.innerHTML = this.elements;
+  
 }
 
 CountriesPage.prototype.connectToAPI = async function() {

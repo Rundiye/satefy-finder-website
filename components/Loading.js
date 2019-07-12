@@ -6,7 +6,7 @@ function Loading(parentElement) {
 }
 
 Loading.prototype.generate = function() {
-  this.elements = '<p>Loading as fast as possible</p>';
+  this.elements = '<img class="loading-image" src="images/dragon-loading.gif" alt="loading image">';
   this.render();
 }
 
